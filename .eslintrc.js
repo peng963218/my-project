@@ -21,10 +21,11 @@ module.exports = {
     'arrow-parens': 0,
     'generator-star-spacing': 0,
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-    'semi': [0],
+    'semi': 0,
     'no-multiple-empty-lines': [1, {'max': 2}],
     'no-mixed-spaces-and-tabs': [1],
     'indent': [0, 2],
+    'max-len': [0, {'code': 300}],
     'no-extra-parens': 2,
     'no-extra-semi': 2,
     'no-multi-spaces': 2,
@@ -46,12 +47,18 @@ module.exports = {
     'no-trailing-spaces': 2,
     'padded-blocks': [2, 'never'],
     'quotes': [0, 'single', 'avoid-escape'],
-    'vue/no-parsing-error': [2, {'x-invalid-end-tag': false}],
+    'vue/no-parsing-error': [0, {'x-invalid-end-tag': false}],
     "no-new-func": 1,
     "no-new-object": 2,
     "no-new-require": 2,
     "no-spaced-func": 2,
     "space-before-function-paren": [0, "always"],
-    'linebreak-style': [0, "windows"]
+    'linebreak-style': [0, "windows"],
+    "prefer-const": 0,
+    "vue/return-in-computed-property": 0,
+    "vue/valid-v-bind": 0,
+    "valid-jsdoc": 0,
+    "guard-for-in": 0,
+    "prefer-promise-reject-errors": 0
   }
 }

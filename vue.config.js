@@ -1,5 +1,5 @@
 /**
- * user name:  zjxpd
+ * user name:  zjxpdq
  * creation time:  2019/9/17 11:04
  */
 const path = require('path')
@@ -14,14 +14,22 @@ module.exports = {
   lintOnSave: process.env.NODE_ENV === 'development',
   productionSourceMap: false,
   devServer: {
-    port: 9527,
+    port: 9318,
     open: true,
     overlay: {
-      warnings: true,
+      warnings: false,
       errors: true
     },
-    disableHostCheck: true
-    // proxy: {}
+    disableHostCheck: true,
+    proxy: {
+      '/api': {
+        target: process.env.VUE_APP_BASE_API + '', // 对应自己的接口
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    }
   },
   configureWebpack: {
     name: 'vue-3.0',
